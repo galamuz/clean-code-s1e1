@@ -40,7 +40,8 @@ var createNewTaskElement = function (taskString) {
     editButton.className = "task__edit-button";
 
     deleteButton.className = "task__delete-button";
-    deleteButtonImg.src = './remove.svg';
+    deleteButtonImg.src = "/asserts/remove-button-image.svg";
+    deleteButtonImg.alt="Remove"
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -125,9 +126,7 @@ var taskCompleted = function () {
 
 var taskIncomplete = function () {
     console.log("Incomplete Task...");
-    //Mark task as incomplete.
-    //When the checkbox is unchecked
-    //Append the task list item to the #incompleteTasks.
+    //TODO:Append the task list item to the #incompleteTasks.
     var listItem = this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
